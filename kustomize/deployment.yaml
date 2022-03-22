@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: flask-demo
-          image: wangyichen/flask-demo
+          image: wangyichen/flask-demo:v1
           ports:
             - name: http-5000
               containerPort: 5000

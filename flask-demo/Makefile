@@ -1,4 +1,4 @@
-DOCKER_TAG = "v2"
+DOCKER_TAG = "v1"
 DOCKER_IMAGE = "wangyichen/flask-demo"
 
 build:
