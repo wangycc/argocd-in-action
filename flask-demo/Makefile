@@ -1,8 +1,13 @@
-name="wangyichen/flask-demo"
-tag="latest"
+DOCKER_TAG = "v2"
+DOCKER_IMAGE = "wangyichen/flask-demo"
 
-image:
-	docker build -t ${name}:${tag} .
+build:
+	@docker build -t $(DOCKER_IMAGE):$(DOCKER_TAG) .
 
-push:image
-    docker push -t ${name}:${tag}
+push:
+	@docker push $(DOCKER_IMAGE):$(DOCKER_TAG)
+all: build push
+
+rm:
+	@docker rmi $(DOCKER_IMAGE):$(DOCKER_TAG)
+.PHONY: build push all rm
